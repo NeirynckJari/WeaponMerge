@@ -14,13 +14,28 @@
     "Type": "Melee"
 },
 {
-    "Name": "Mithril Sword",
+    "Name": "Black Sword",
     "Level": 4,
     "Type": "Melee"
 },
 {
-    "Name": "Dragon Scimitar",
+    "Name": "Mithril Sword",
     "Level": 5,
+    "Type": "Melee"
+},
+{
+    "Name": "Adamant Sword",
+    "Level": 6,
+    "Type": "Melee"
+},
+{
+    "Name": "Rune Sword",
+    "Level": 7,
+    "Type": "Melee"
+},
+{
+    "Name": "Dragon Sword",
+    "Level": 8,
     "Type": "Melee"
 },
 {
@@ -44,8 +59,23 @@
     "Type": "Ranged"
 },
 {
-    "Name": "Rune Crossbow",
+    "Name": "Yew Shortbow",
     "Level": 5,
+    "Type": "Ranged"
+},
+{
+    "Name": "Magic Shortbow",
+    "Level": 6,
+    "Type": "Ranged"
+},
+{
+    "Name": "Rune Crossbow",
+    "Level": 7,
+    "Type": "Ranged"
+},
+{
+    "Name": "Dragon Crossbow",
+    "Level": 8,
     "Type": "Ranged"
 },
 {
@@ -71,6 +101,21 @@
 {
     "Name": "Ancient Staff",
     "Level": 5,
+    "Type": "Magic"
+},
+{
+    "Name": "Apprentice Wand",
+    "Level": 6,
+    "Type": "Magic"
+},
+{
+    "Name": "Master Wand",
+    "Level": 7,
+    "Type": "Magic"
+},
+{
+    "Name": "Ancient Sceptre",
+    "Level": 8,
     "Type": "Magic"
 }
 ]
