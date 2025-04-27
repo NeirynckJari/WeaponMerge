@@ -1,0 +1,76 @@
+[{
+    "Name": "Bronze Sword",
+    "Level": 1,
+    "Type": "Melee"
+},
+{
+    "Name": "Iron Sword",
+    "Level": 2,
+    "Type": "Melee"
+},
+{
+    "Name": "Steel Sword",
+    "Level": 3,
+    "Type": "Melee"
+},
+{
+    "Name": "Mithril Sword",
+    "Level": 4,
+    "Type": "Melee"
+},
+{
+    "Name": "Dragon Scimitar",
+    "Level": 5,
+    "Type": "Melee"
+},
+{
+    "Name": "Shortbow",
+    "Level": 1,
+    "Type": "Ranged"
+},
+{
+    "Name": "Oak Shortbow",
+    "Level": 2,
+    "Type": "Ranged"
+},
+{
+    "Name": "Willow Shortbow",
+    "Level": 3,
+    "Type": "Ranged"
+},
+{
+    "Name": "Maple Shortbow",
+    "Level": 4,
+    "Type": "Ranged"
+},
+{
+    "Name": "Rune Crossbow",
+    "Level": 5,
+    "Type": "Ranged"
+},
+{
+    "Name": "Air Staff",
+    "Level": 1,
+    "Type": "Magic"
+},
+{
+    "Name": "Water Staff",
+    "Level": 2,
+    "Type": "Magic"
+},
+{
+    "Name": "Earth Staff",
+    "Level": 3,
+    "Type": "Magic"
+},
+{
+    "Name": "Fire Staff",
+    "Level": 4,
+    "Type": "Magic"
+},
+{
+    "Name": "Ancient Staff",
+    "Level": 5,
+    "Type": "Magic"
+}
+]
