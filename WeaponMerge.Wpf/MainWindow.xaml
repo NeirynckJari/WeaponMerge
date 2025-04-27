@@ -1,0 +1,74 @@
+﻿<Window x:Class="WeaponMerge.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="OSRS Merge Weapon Game" Height="600" Width="800"
+        Background="#FF1E1E1E" Loaded="Window_Loaded">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Bovenste selectie -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,20">
+            <ComboBox x:Name="cmbWeaponStyle"
+                      Width="200"
+                      Height="40"
+                      Margin="10"
+                      Background="#FF2E2E2E"
+                      Foreground="White"
+                      FontSize="16"
+                      BorderThickness="0"
+                      Padding="5" SelectionChanged="CmbWeaponStyle_SelectionChanged">
+                <!--<ComboBoxItem Content="Melee" />
+                <ComboBoxItem Content="Ranged" />
+                <ComboBoxItem Content="Magic" />-->
+            </ComboBox>
+            <Button x:Name="btnMakeWeapon"
+                    Content="Maak Wapen"
+                    Width="150"
+                    Height="40"
+                    Margin="10"
+                    Background="#FF4CAF50"
+                    Foreground="White"
+                    FontWeight="Bold"
+                    BorderThickness="0"
+                    Cursor="Hand"
+                    FontSize="16"
+                    Padding="5" Click="BtnMakeWeapon_Click"/>
+        </StackPanel>
+
+        <!-- Midden: lijst van wapens -->
+        <ListBox x:Name="lstWeapons"
+                 Grid.Row="1"
+                 Background="#FF2E2E2E"
+                 Foreground="White"
+                 BorderThickness="0"
+                 FontSize="16"
+                 Margin="0,0,0,20"
+                 SelectionMode="Extended"/>
+
+        <!-- Onderste actie en meldingen -->
+        <StackPanel Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Center">
+            <Button x:Name="btnMergeWeapons"
+                    Content="Merge Wapens"
+                    Width="200"
+                    Height="50"
+                    Background="#FF2196F3"
+                    Foreground="White"
+                    FontWeight="Bold"
+                    FontSize="18"
+                    BorderThickness="0"
+                    Cursor="Hand"
+                    Margin="0,0,0,10"
+                    Padding="5" Click="BtnMergeWeapons_Click"/>
+            <ListBox x:Name="lstMessages"
+                     Height="100"
+                     Background="#FF2E2E2E"
+                     Foreground="LightGray"
+                     BorderThickness="0"
+                     FontSize="14"/>
+        </StackPanel>
+    </Grid>
+</Window>
