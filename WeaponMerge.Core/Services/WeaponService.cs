@@ -38,7 +38,7 @@ namespace WeaponMerge.Core.Services
             }
             if (weapon1.Type == weapon2.Type && weapon1.Level == weapon2.Level)
             {
-                IWeapon newWeapon = weaponCatalog.GetWeapon(weapon1.Type, weapon1.Level + 1);
+                IWeapon newWeapon = weaponCatalog.GetWeapon(weapon1.WeaponType, weapon1.Level + 1);
 
                 if (newWeapon != null)
                 {

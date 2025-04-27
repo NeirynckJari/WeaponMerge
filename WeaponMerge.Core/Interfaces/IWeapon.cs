@@ -11,7 +11,8 @@ namespace WeaponMerge.Core.Interfaces
     {
         string Name { get; }
         int Level { get; }
-        WeaponType Type { get; }
+        string Type { get; }
+        WeaponType WeaponType { get; }
 
         void Merge(IWeapon otherWeapon);
     }

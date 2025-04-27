@@ -31,8 +31,14 @@ namespace WeaponMerge.Core.Services
         {
             HttpClient httpClient = new HttpClient();
             string jsonData = await httpClient.GetStringAsync("https://neirynckjari.github.io/WeaponMerge/weapons.json");
-            List<JSONWeapons> jsonDataList = JsonSerializer.Deserialize<List<JSONWeapons>>(jsonData);
-            foreach (JSONWeapons weapon in jsonDataList)
+            List<Weapon> jsonDataList = JsonSerializer.Deserialize<List<Weapon>>(jsonData);
+
+            if (jsonDataList == null)
+            {
+                throw new InvalidOperationException("De JSON-gegevens konden niet worden gedeserialiseerd.");
+            }
+
+            foreach (Weapon weapon in jsonDataList)
             {
                 if (weapon != null)
                 {
@@ -60,7 +66,7 @@ namespace WeaponMerge.Core.Services
         {
             foreach (IWeapon weapon in _weapons)
             {
-                if (weapon.Type == type && weapon.Level == level)
+                if (weapon.WeaponType == type && weapon.Level == level)
                 {
                     return weapon;
                 }

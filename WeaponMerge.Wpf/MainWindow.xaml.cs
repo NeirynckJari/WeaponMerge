@@ -23,7 +23,7 @@ namespace WeaponMerge.Wpf
         WeaponService weaponService;
         WeaponType selectedType;
 
-        public  MainWindow()
+        public MainWindow()
         {
             InitializeComponent();
             weaponService = new WeaponService();
@@ -44,7 +44,7 @@ namespace WeaponMerge.Wpf
             lstWeapons.Items.Clear();
             foreach (IWeapon weapon in weaponService.Weapons)
             {
-                if (weapon.Type == type)
+                if (weapon.WeaponType == type)
                 {
                     lstWeapons.Items.Add(weapon);
                 }
@@ -55,7 +55,15 @@ namespace WeaponMerge.Wpf
         private async void Window_Loaded(object sender, RoutedEventArgs e)
         {
             PopulateCategoryComboBox();
-            await weaponService.weaponCatalog.GenerateWeapons();
+            try
+            {
+                await weaponService.weaponCatalog.GenerateWeapons();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
         }
 
         private void BtnMakeWeapon_Click(object sender, RoutedEventArgs e)

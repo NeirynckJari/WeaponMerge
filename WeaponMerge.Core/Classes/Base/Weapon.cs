@@ -45,21 +45,23 @@ namespace WeaponMerge.Core.Classes.Base
             }
         }
 
-        private WeaponType type;
+        public string Type { get; set; } //Pure JSON usage
 
-        public WeaponType Type
+        private WeaponType weaponType;
+
+        public WeaponType WeaponType
         {
             get
             {
-                return type;
+                return weaponType;
             }
             set
             {
-                if (type == null)
+                if (value == null)
                 {
                     throw new ArgumentException("Type moet nog gekozen worden!");
                 }
-                type = value;
+                weaponType = value;
             }
         }
 
@@ -67,7 +69,7 @@ namespace WeaponMerge.Core.Classes.Base
         {
             Name = name;
             Level = level;
-            Type = type;
+            WeaponType = type;
         }
 
         public virtual void Merge(IWeapon otherWeapon)
