@@ -11,7 +11,7 @@ namespace WeaponMerge.Core.Classes.Entities
 {
     public class RangedWeapon : Weapon
     {
-        public RangedWeapon(string name, int level) : base(name, level, WeaponType.Ranged)
+        public RangedWeapon(string name, int level) : base(name, level, "Ranged")
         {
         }
     }

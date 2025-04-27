@@ -8,7 +8,7 @@ using WeaponMerge.Core.Interfaces;
 
 namespace WeaponMerge.Core.Classes.Base
 {
-    public abstract class Weapon : IWeapon
+    public class Weapon : IWeapon // Removed abstract for JSON working...
     {
         private string name;
         private int level;
@@ -47,29 +47,36 @@ namespace WeaponMerge.Core.Classes.Base
 
         public string Type { get; set; } //Pure JSON usage
 
-        private WeaponType weaponType;
 
         public WeaponType WeaponType
         {
             get
             {
-                return weaponType;
-            }
-            set
-            {
-                if (value == null)
+                if (Type == "Melee")
                 {
-                    throw new ArgumentException("Type moet nog gekozen worden!");
+                    return WeaponType.Melee;
                 }
-                weaponType = value;
+                else if (Type == "Ranged")
+                {
+                    return WeaponType.Ranged;
+                }
+                else if (Type == "Magic")
+                {
+                    return WeaponType.Magic;
+                } 
+                else
+                {
+                    throw new ArgumentException("Wrong type was entered!");
+                }
             }
         }
 
-        public Weapon(string name, int level, WeaponType type)
+
+        public Weapon(string name, int level, string type)
         {
             Name = name;
             Level = level;
-            WeaponType = type;
+            Type = type;
         }
 
         public virtual void Merge(IWeapon otherWeapon)

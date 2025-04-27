@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WeaponMerge.Core.Classes.Base;
 using WeaponMerge.Core.Classes.Entities;
 using WeaponMerge.Core.Enums;
 using WeaponMerge.Core.Interfaces;
@@ -21,7 +22,9 @@ namespace WeaponMerge.Core.Services
         {
             weapons = new List<IWeapon>()
             {
-
+                new Weapon("Admin Weapon", 100, "Melee"), //Sadly enough we can add Weapons 
+                new Weapon("Admin Weapon", 100, "Magic"),
+                new Weapon("Admin Weapon", 100, "Ranged")
             };
         }
 

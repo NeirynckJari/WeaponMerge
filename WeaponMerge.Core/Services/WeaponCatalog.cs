@@ -17,10 +17,6 @@ namespace WeaponMerge.Core.Services
     {
         private readonly List<IWeapon> _weapons = new List<IWeapon>();
 
-        async public Task FetchWeapons()
-        {
-
-        }
 
         public WeaponCatalog()
         {
