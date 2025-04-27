@@ -1,11 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
+using WeaponMerge.Core.Classes.Base;
 using WeaponMerge.Core.Classes.Entities;
 using WeaponMerge.Core.Enums;
 using WeaponMerge.Core.Interfaces;
+
 
 namespace WeaponMerge.Core.Services
 {
@@ -13,27 +17,45 @@ namespace WeaponMerge.Core.Services
     {
         private readonly List<IWeapon> _weapons = new List<IWeapon>();
 
+        async public Task FetchWeapons()
+        {
+
+        }
+
         public WeaponCatalog()
         {
-            // Alle wapens toevoegen bij de start
-            _weapons.Add(new MeleeWeapon("Bronze Sword", 1));
-            _weapons.Add(new MeleeWeapon("Iron Sword", 2));
-            _weapons.Add(new MeleeWeapon("Steel Sword", 3));
-            _weapons.Add(new MeleeWeapon("Mithril Sword", 4));
-            _weapons.Add(new MeleeWeapon("Dragon Scimitar", 5));
-
-            _weapons.Add(new RangedWeapon("Shortbow", 1));
-            _weapons.Add(new RangedWeapon("Oak Shortbow", 2));
-            _weapons.Add(new RangedWeapon("Willow Shortbow", 3));
-            _weapons.Add(new RangedWeapon("Maple Shortbow", 4));
-            _weapons.Add(new RangedWeapon("Rune Crossbow", 5));
-
-            _weapons.Add(new MagicWeapon("Air Staff", 1));
-            _weapons.Add(new MagicWeapon("Water Staff", 2));
-            _weapons.Add(new MagicWeapon("Earth Staff", 3));
-            _weapons.Add(new MagicWeapon("Fire Staff", 4));
-            _weapons.Add(new MagicWeapon("Ancient Staff", 5));
+            _weapons = new List<IWeapon>() { };
         }
+
+        async public Task GenerateWeapons()
+        {
+            HttpClient httpClient = new HttpClient();
+            string jsonData = await httpClient.GetStringAsync("https://neirynckjari.github.io/WeaponMerge/weapons.json");
+            List<JSONWeapons> jsonDataList = JsonSerializer.Deserialize<List<JSONWeapons>>(jsonData);
+            foreach (JSONWeapons weapon in jsonDataList)
+            {
+                if (weapon != null)
+                {
+                    IWeapon weaponToAdd;
+                    if (weapon.WeaponType == WeaponType.Melee)
+                    {
+                        weaponToAdd = new MeleeWeapon(weapon.Name, weapon.Level);
+                        _weapons.Add(weaponToAdd);
+                    }
+                    else if (weapon.WeaponType == WeaponType.Magic)
+                    {
+                        weaponToAdd = new MagicWeapon(weapon.Name, weapon.Level);
+                        _weapons.Add(weaponToAdd);
+                    }
+                    else if (weapon.WeaponType == WeaponType.Ranged)
+                    {
+                        weaponToAdd = new RangedWeapon(weapon.Name, weapon.Level);
+                        _weapons.Add(weaponToAdd);
+                    }
+                }
+            }
+        }
+
         public IWeapon GetWeapon(WeaponType type, int level)
         {
             foreach (IWeapon weapon in _weapons)

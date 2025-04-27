@@ -11,7 +11,7 @@ namespace WeaponMerge.Core.Services
 {
     public class WeaponService
     {
-        private WeaponCatalog weaponCatalog = new WeaponCatalog();
+        public WeaponCatalog weaponCatalog = new WeaponCatalog();
 
         private List<IWeapon> weapons;
 

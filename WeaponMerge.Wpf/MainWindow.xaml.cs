@@ -23,10 +23,11 @@ namespace WeaponMerge.Wpf
         WeaponService weaponService;
         WeaponType selectedType;
 
-        public MainWindow()
+        public  MainWindow()
         {
             InitializeComponent();
             weaponService = new WeaponService();
+
         }
 
         private void PopulateCategoryComboBox()
@@ -51,9 +52,10 @@ namespace WeaponMerge.Wpf
         }
 
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private async void Window_Loaded(object sender, RoutedEventArgs e)
         {
             PopulateCategoryComboBox();
+            await weaponService.weaponCatalog.GenerateWeapons();
         }
 
         private void BtnMakeWeapon_Click(object sender, RoutedEventArgs e)
