@@ -1,121 +1,145 @@
 [{
     "Name": "Bronze Sword",
     "Level": 1,
-    "Type": "Melee"
+    "Type": "Melee",
+    "img": "https://oldschool.runescape.wiki/w/Bronze_sword#/media/File:Bronze_sword_detail.png"
 },
 {
     "Name": "Iron Sword",
     "Level": 2,
-    "Type": "Melee"
+    "Type": "Melee",
+    "img": "https://oldschool.runescape.wiki/w/Iron_sword#/media/File:Iron_sword_detail.png"
 },
 {
     "Name": "Steel Sword",
     "Level": 3,
-    "Type": "Melee"
+    "Type": "Melee",
+    "img": "https://oldschool.runescape.wiki/w/Steel_sword#/media/File:Steel_sword_detail.png"
 },
 {
     "Name": "Black Sword",
     "Level": 4,
-    "Type": "Melee"
+    "Type": "Melee",
+    "img": "https://oldschool.runescape.wiki/w/Black_sword#/media/File:Black_sword_detail.png"
 },
 {
     "Name": "Mithril Sword",
     "Level": 5,
-    "Type": "Melee"
+    "Type": "Melee",
+    "img": "https://oldschool.runescape.wiki/w/Mithril_sword#/media/File:Mithril_sword_detail.png"
 },
 {
     "Name": "Adamant Sword",
     "Level": 6,
-    "Type": "Melee"
+    "Type": "Melee",
+    "img": "https://oldschool.runescape.wiki/w/Adamant_sword#/media/File:Adamant_sword_detail.png"
 },
 {
     "Name": "Rune Sword",
     "Level": 7,
-    "Type": "Melee"
+    "Type": "Melee",
+    "img": "https://oldschool.runescape.wiki/w/Rune_sword#/media/File:Rune_sword_detail.png"
 },
 {
     "Name": "Dragon Sword",
     "Level": 8,
-    "Type": "Melee"
+    "Type": "Melee",
+    "img": "https://oldschool.runescape.wiki/w/Dragon_sword#/media/File:Dragon_sword_detail.png"
 },
 {
     "Name": "Shortbow",
     "Level": 1,
-    "Type": "Ranged"
+    "Type": "Ranged",
+    "img": "https://oldschool.runescape.wiki/w/Shortbow#/media/File:Shortbow_detail.png"
 },
 {
     "Name": "Oak Shortbow",
     "Level": 2,
-    "Type": "Ranged"
+    "Type": "Ranged",
+    "img": "https://oldschool.runescape.wiki/w/Oak_shortbow#/media/File:Oak_shortbow_detail.png"
 },
 {
     "Name": "Willow Shortbow",
     "Level": 3,
-    "Type": "Ranged"
+    "Type": "Ranged",
+    "img": "https://oldschool.runescape.wiki/w/Willow_shortbow#/media/File:Willow_shortbow_detail.png"
 },
 {
     "Name": "Maple Shortbow",
     "Level": 4,
-    "Type": "Ranged"
+    "Type": "Ranged",
+    "img": "https://oldschool.runescape.wiki/w/Maple_shortbow#/media/File:Maple_shortbow_detail.png"
 },
 {
     "Name": "Yew Shortbow",
     "Level": 5,
-    "Type": "Ranged"
+    "Type": "Ranged",
+    "img": "https://oldschool.runescape.wiki/w/Yew_shortbow#/media/File:Yew_shortbow_detail.png"
 },
 {
     "Name": "Magic Shortbow",
     "Level": 6,
-    "Type": "Ranged"
+    "Type": "Ranged",
+    "img": "https://oldschool.runescape.wiki/w/Magic_shortbow#/media/File:Magic_shortbow_detail.png"
 },
 {
     "Name": "Rune Crossbow",
     "Level": 7,
-    "Type": "Ranged"
+    "Type": "Ranged",
+    "img": "https://oldschool.runescape.wiki/w/Rune_crossbow#/media/File:Rune_crossbow_detail.png"
 },
 {
     "Name": "Dragon Crossbow",
     "Level": 8,
-    "Type": "Ranged"
+    "Type": "Ranged",
+    "img": "https://oldschool.runescape.wiki/w/Dragon_crossbow#/media/File:Dragon_crossbow_detail.png"
 },
 {
     "Name": "Air Staff",
     "Level": 1,
-    "Type": "Magic"
+    "Type": "Magic",
+    "img": "https://oldschool.runescape.wiki/w/Staff_of_air#/media/File:Staff_of_air_detail.png"
 },
 {
     "Name": "Water Staff",
     "Level": 2,
-    "Type": "Magic"
+    "Type": "Magic",
+    "img": "https://oldschool.runescape.wiki/w/Staff_of_water#/media/File:Staff_of_water_detail.png"
 },
 {
     "Name": "Earth Staff",
     "Level": 3,
-    "Type": "Magic"
+    "Type": "Magic",
+    "img": "https://oldschool.runescape.wiki/w/Staff_of_earth#/media/File:Staff_of_earth_detail.png"
 },
 {
     "Name": "Fire Staff",
     "Level": 4,
-    "Type": "Magic"
+    "Type": "Magic",
+    "img": "https://oldschool.runescape.wiki/w/Staff_of_fire#/media/File:Staff_of_fire_detail.png"
 },
 {
     "Name": "Ancient Staff",
     "Level": 5,
-    "Type": "Magic"
+    "Type": "Magic",
+    "img": "https://oldschool.runescape.wiki/w/Ancient_staff#/media/File:Ancient_staff_detail.png"
 },
 {
     "Name": "Apprentice Wand",
     "Level": 6,
-    "Type": "Magic"
+    "Type": "Magic",
+    "img": "https://oldschool.runescape.wiki/w/Apprentice_wand#/media/File:Apprentice_wand_detail.png"
 },
 {
     "Name": "Master Wand",
     "Level": 7,
-    "Type": "Magic"
+    "Type": "Magic",
+    "img": "https://oldschool.runescape.wiki/w/Master_wand#/media/File:Master_wand_detail.png"
 },
 {
     "Name": "Ancient Sceptre",
     "Level": 8,
-    "Type": "Magic"
+    "Type": "Magic",
+    "img": "https://oldschool.runescape.wiki/w/Ancient_sceptre#/media/File:Ancient_sceptre_detail.png"
 }
 ]
