@@ -2,8 +2,10 @@
 
 //Global variables
 
-let weaponList = [];
+let weaponList = []; // fetched JSON data gets inserted here
 let selectedType; // this to control the list
+let playField, slcType;
+let btnCreateWeapon, btnMergeWeapon;
 
 window.addEventListener("load", initialize)
 

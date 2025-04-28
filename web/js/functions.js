@@ -5,7 +5,10 @@ async function fetchData(path){ //add path
 }
 
 function bindElements(){
-
+    playField = document.querySelector("#play-field");
+    slcType = document.querySelector("#weapon-style");
+    btnCreateWeapon = document.querySelector("#create-weapon");
+    btnMergeWeapon = document.querySelector("#merge-weapons");
 }
 
 function addEventListeners(){
