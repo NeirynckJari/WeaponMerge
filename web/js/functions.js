@@ -12,5 +12,32 @@ function bindElements(){
 }
 
 function addEventListeners(){
-    
+    btnCreateWeapon.addEventListener("click", createWeapon);
+    btnMergeWeapon.addEventListener("click", mergeWeapons);
+    slcType.addEventListener("change", function() {setSelectedType(slcType.value)});
+}
+
+//This function could be done (easier) in HTML but we will Populate Select like this.
+
+function populateSelect(){
+    slcType[slcType.length] = new Option("Melee", "melee");
+    slcType[slcType.length] = new Option("Magic", "magic");
+    slcType[slcType.length] = new Option("Ranged", "ranged");
+}
+
+function createWeapon(){
+
+}
+
+function mergeWeapons(){
+
+}
+
+function setSelectedType(type){
+    selectedType = type;
+    updateList(type);
+}
+
+function updateList(type){
+
 }

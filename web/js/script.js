@@ -15,4 +15,6 @@ async function initialize(){
     bindElements();
 
     addEventListeners();
+
+    populateSelect();
 }
