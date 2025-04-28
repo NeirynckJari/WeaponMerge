@@ -1,0 +1,20 @@
+body{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-width: 700px;
+    margin: 10px auto 10px auto;
+}
+
+select{
+    max-width: max-content;
+}
+
+button{
+    margin-top: 5px;
+    max-width: max-content;
+}
+
+#playField img{
+    scale: 20%;
+}

@@ -6,6 +6,7 @@ let weaponList = []; // fetched JSON data gets inserted here
 let selectedType; // this to control the list
 let playField, slcType;
 let btnCreateWeapon, btnMergeWeapon;
+let weapons = [];
 
 window.addEventListener("load", initialize)
 
