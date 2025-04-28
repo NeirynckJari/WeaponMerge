@@ -25,3 +25,7 @@ button{
     display: flex;
     flex-wrap: wrap;
 }
+
+.selected{
+    border: 5px solid #49E635;
+}

@@ -7,6 +7,8 @@ let selectedType; // this to control the list
 let playField, slcType;
 let btnCreateWeapon, btnMergeWeapon;
 let weapons = [];
+let obj1 = {}, obj2 = {};
+let weaponId = 0;
 
 window.addEventListener("load", initialize)
 
