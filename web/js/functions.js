@@ -31,6 +31,7 @@ function populateSelect() {
 }
 
 function createWeapon(selectedType) {
+    if (weapons.filter((weapon) => weapon.Type == selectedType).length < 50){
     const weapon = weaponList.filter((weap) => weap.Type == selectedType)[0];
     switch (selectedType) {
         case "Melee":
@@ -47,7 +48,10 @@ function createWeapon(selectedType) {
             break;
     }
     updateWeaponList(selectedType);
-}
+} else {
+    alert("Please merge some weapons first!");
+    return;
+}}
 
 function mergeWeapons() {}
 

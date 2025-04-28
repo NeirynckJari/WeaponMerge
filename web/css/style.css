@@ -15,6 +15,13 @@ button{
     max-width: max-content;
 }
 
-#playField img{
-    scale: 20%;
+#play-field img{
+    width: 50px;
+    height: 50px;
+}
+
+#play-field{
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
 }
