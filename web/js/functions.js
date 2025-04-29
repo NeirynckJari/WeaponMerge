@@ -61,25 +61,54 @@ function createWeapon(selectedType) {
 }
 
 function mergeWeapons(objectOne, objectTwo) {
-    if (
-        Object.keys(objectOne).length == 0 &&
-        Object.keys(objectTwo).length == 0
-    ) {
-        alert("Need to select two objects to merge!");
+    if (checkInputs(objectOne, objectTwo).error) {
+        alert(checkInputs(objectOne, objectTwo).alert);
         return;
     } else {
-        //problems here
-        const weaponIndexOne = weapons.findIndex((w) => w.weapon.id === objectOne.id);
-        const weaponIndexTwo = weapons.findIndex((w) => w.weapon.id === objectTwo.id);
-        weapons.unshift({weapon:
-            weaponList.filter((weapon) => weapon.Type == weaponIndexOne.weapon.Type)[
-                weaponIndexOne.Level + 1
-            , weaponIndexOne.id]},
-            1
-        );
-        weapons.splice(weaponIndexOne, 1);
-        weapons.splice(weaponIndexTwo, 1);
+        weaponId++;
+        const weaponIndexOne = weapons.findIndex((w) => w.id === objectOne.id);
+        const weaponIndexTwo = weapons.findIndex((w) => w.id === objectTwo.id);
+        const newWeapon = weaponList.filter(
+            (weapon) => weapon.Type === objectOne.weapon.Type
+        )[objectOne.weapon.Level];
+
+        if (weaponIndexOne > weaponIndexTwo) {
+            weapons.splice(weaponIndexOne, 1);
+            weapons.splice(weaponIndexTwo, 1);
+        } else {
+            weapons.splice(weaponIndexTwo, 1);
+            weapons.splice(weaponIndexOne, 1);
+        }
+        weapons.push({ weapon: newWeapon, id: weaponId });
         updateWeaponList(selectedType);
+        removeSelects();
+    }
+}
+
+function checkInputs(objectOne, objectTwo) {
+    if (
+        Object.keys(objectOne).length == 0 ||
+        Object.keys(objectTwo).length == 0
+    ) {
+        return {
+            error: true,
+            alert: "Need to select two objects to merge!",
+        };
+    } else if (objectOne.weapon.Type !== objectTwo.weapon.Type) {
+        return {
+            error: true,
+            alert: "Please choose weapons of the same type!",
+        };
+    } else if (objectOne.weapon.Level !== objectTwo.weapon.Level) {
+        return {
+            error: true,
+            alert: "Please choose weapons of the same level!",
+        };
+    } else {
+        return{
+            error:false,
+            alert: ""
+        };
     }
 }
 
@@ -114,14 +143,14 @@ function selectWeapon(image) {
         (weapon) => weapon.id == image.dataset.id
     );
     if (Object.keys(obj1).length === 0) {
-        obj1 = clickedWeapon.weapon;
+        obj1 = clickedWeapon;
         image.classList.add("selected");
     } else if (Object.keys(obj2).length === 0) {
-        obj2 = clickedWeapon.weapon;
+        obj2 = clickedWeapon;
         image.classList.add("selected");
     } else if (Object.keys(obj1).length > 0 && Object.keys(obj2).length > 0) {
         removeSelects();
-        obj1 = clickedWeapon.weapon;
+        obj1 = clickedWeapon;
         image.classList.add("selected");
     }
 }
