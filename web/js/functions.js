@@ -14,6 +14,7 @@ function bindElements() {
     slcType = document.querySelector("#weapon-style");
     btnCreateWeapon = document.querySelector("#create-weapon");
     btnMergeWeapon = document.querySelector("#merge-weapons");
+    lstWeapons = document.querySelector("#weapon-list");
 }
 
 function addEventListeners() {
@@ -131,6 +132,7 @@ function updateWeaponList(selectedType) {
                 visualizeWeapon(weapon);
             });
     }
+    visualizeWeaponList(selectedType);
 }
 
 function visualizeWeapon(weapon) {
@@ -141,6 +143,16 @@ function visualizeWeapon(weapon) {
         selectWeapon(this);
     });
     playField.append(newImg);
+}
+
+function visualizeWeaponList(type){
+    lstWeapons.innerHTML = "<strong>Weapon List:</strong></br>";
+    weapons.filter((weapon) => weapon.weapon.Type === type)
+            .forEach((weapon => {
+                const newLi = document.createElement("li");
+                newLi.textContent = weapon.weapon.Name;
+                lstWeapons.append(newLi);
+            }));
 }
 
 function selectWeapon(image) {
