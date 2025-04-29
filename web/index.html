@@ -6,18 +6,30 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/functions.js"></script>
     <script src="js/script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <title>OSRS Weapon Merger</title>
 </head>
 <body>
-    <select id="weapon-style">
-        <option value="">Select a weapon style</option>
-    </select>
-    <button id="create-weapon">Create Weapon</button>
-    <button id="merge-weapons">Merge Weapons</button>
-    <div id="play-field">
+    <h1>OSRS Weapon Merger</h1>
 
+    <div class="container">
+        <ul id="weapon-list">
+            <strong>Weapon List:</strong>
+        </ul>
+
+        <div class="controls-and-playfield">
+            <select id="weapon-style">
+                <option value="">Select a weapon style</option>
+            </select>
+            <button id="create-weapon">Create Weapon</button>
+            <button id="merge-weapons">Merge Weapons</button>
+
+            <div id="play-field"></div>
+        </div>
     </div>
-    <span>© Weapon images sourced from the <a href="https://oldschool.runescape.wiki/" target="_blank">Old School RuneScape Wiki</a>, property of Jagex Ltd.</span>
 
+    <span class="footer">© Weapon images sourced from the 
+        <a href="https://oldschool.runescape.wiki/" target="_blank">Old School RuneScape Wiki</a>, property of Jagex Ltd.
+    </span>
 </body>
 </html>

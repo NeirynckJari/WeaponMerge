@@ -5,6 +5,10 @@ async function fetchData(path) {
         .then((data) => (weaponList = data));
 }
 
+//TODO:
+
+//Make a list to better visualize the weapons made
+
 function bindElements() {
     playField = document.querySelector("#play-field");
     slcType = document.querySelector("#weapon-style");
@@ -61,8 +65,9 @@ function createWeapon(selectedType) {
 }
 
 function mergeWeapons(objectOne, objectTwo) {
-    if (checkInputs(objectOne, objectTwo).error) {
-        alert(checkInputs(objectOne, objectTwo).alert);
+    const checkResult = checkInputs(objectOne, objectTwo);
+    if (checkResult.error) {
+        alert(checkResult.alert);
         return;
     } else {
         weaponId++;
